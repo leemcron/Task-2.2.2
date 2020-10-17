@@ -7,10 +7,6 @@ import java.util.List;
 
 public class CarsServiceImpl implements CarsService {
 
-
-
-
-
     @Override
     public List<Car> listCars(int countCars) {
         List<Car> cars = new ArrayList<>();
@@ -21,13 +17,5 @@ public class CarsServiceImpl implements CarsService {
         cars.add(new Car("Kia", "grey", 331));
 
         return countCars > 5 ? cars : cars.subList(0, countCars);
-    }
-
-
-    public static void main(String[] args) {
-        CarsService carsService = null;
-        assert carsService != null;
-        List<Car> cars = carsService.listCars(55);
-        cars.forEach(System.out::println);
     }
 }

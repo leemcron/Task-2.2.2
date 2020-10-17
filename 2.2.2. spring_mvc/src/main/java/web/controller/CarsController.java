@@ -10,7 +10,7 @@ import web.service.CarsServiceImpl;
 @Controller
 public class CarsController {
 
-    final CarsService carsService = new CarsServiceImpl();
+    CarsService carsService = new CarsServiceImpl();
 
     @GetMapping(value = "/cars")
     public String printCars(@RequestParam(value = "count", required = false) Integer x, Model model) {
